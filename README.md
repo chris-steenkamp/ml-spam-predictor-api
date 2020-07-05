@@ -43,7 +43,7 @@ $ zappa init
 ```
 This will run through the initial configuration, you can accept the defaults but **make sure** you enter ```api.app.app``` when it asks for your app's function.
 
-```bash
+```
                                                                                                                                                                                                   
 ███████╗ █████╗ ██████╗ ██████╗  █████╗                                                                                                                                                           
 ╚══███╔╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗                                                                                                                                                          
@@ -96,3 +96,18 @@ Once you have setup the initialized zappa you are ready to deploy the code to AW
 ```bash
 $ zappa deploy dev
 ```
+
+Zappa will now download any required dependencies and package them into a zip file which it will then deploy. After a while you will see something similar to the below:
+
+```
+Scheduling..
+Scheduled 79c8de8d4b3876838570569d3356efd0c9df8-handler.keep_warm_callback with expression rate(4 minutes)!
+Uploading ml-spam-predictor-dev-template-1593965358.json (1.6KiB)..
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.65k/1.65k [00:00<00:00, 3.36kB/s]
+Waiting for stack ml-spam-predictor-dev to create (this can take a bit)..
+ 75%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌                                       | 3/4 [00:10<00:03,  3.37s/res]
+Deploying API Gateway..
+Deployment complete!: https://somerandomstring.execute-api.eu-west-1.amazonaws.com/dev
+```
+
+If everything went smoothly you should be able to access your API via the generated URL https://somerandomstring.execute-api.eu-west-1.amazonaws.com/dev
