@@ -1,0 +1,19 @@
+{
+    "dev": {
+        "app_function": "api.app.app",
+        "aws_region": "eu-west-1",
+        "profile_name": "carniware",
+        "project_name": "zappa-test",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-pc5tdvgoj"
+    },
+    "api": {
+        "app_function": "api.app.app",
+        "aws_region": "eu-west-1",
+        "profile_name": "carniware",
+        "project_name": "ml-spam-precictor",
+        "runtime": "python3.6",
+        "s3_bucket": "ml-spam-precictor2",
+        "exclude": [".vscode", ".git*", "*.md", "*.txt", "LICENSE"]
+    }
+}
