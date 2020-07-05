@@ -3,17 +3,19 @@
         "app_function": "api.app.app",
         "aws_region": "eu-west-1",
         "profile_name": "carniware",
-        "project_name": "zappa-test",
-        "runtime": "python3.6",
-        "s3_bucket": "zappa-pc5tdvgoj"
-    },
-    "api": {
-        "app_function": "api.app.app",
-        "aws_region": "eu-west-1",
-        "profile_name": "carniware",
-        "project_name": "ml-spam-precictor",
-        "runtime": "python3.6",
-        "s3_bucket": "ml-spam-precictor2",
-        "exclude": [".vscode", ".git*", "*.md", "*.txt", "LICENSE"]
+        "project_name": "ml-spam-predictor",
+        "runtime": "python3.8",
+        "s3_bucket": "ml-spam-predictor",
+        "exclude": [
+            ".vscode",
+            ".git*",
+            "*.md",
+            "*.txt",
+            "LICENSE",
+            "*__pycache__*"
+        ],
+        "layers": [
+            "arn:aws:lambda:eu-west-1:399891621064:layer:AWSLambda-Python38-SciPy1x:14"
+        ]
     }
 }
