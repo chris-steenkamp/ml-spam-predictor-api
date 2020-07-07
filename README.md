@@ -33,7 +33,7 @@ Ensure you have the aws cli installed and configured before trying to deploy you
 
  For example, the file ```api/classifier.py``` imports ```pandas``` and ```sklearn``` in order to load some data and train the model but the combination of these two dependencies causes the total size to exceed the limit. I have identified two different workarounds to get the code deployed:
 1. Uninstall pandas before deploying (```pip uninstall -y pandas```). This makes the most sense as you shouldn't be performing training within the lambda execution.
-1. (Advanced) Uninstall both scipy and numpy before deploying and then add the AWS provided SciPy lambda layer once the function has been deployed. (```$ pip uninstall -y scipy numpy```).
+1. (Advanced) Uninstall both scipy and numpy before deploying and then add the AWS provided SciPy lambda layer once the function has been deployed. (```$ pip uninstall -y scipy numpy```). The included ```zappa_settings_example.json``` file shows how to automate this step using code in ```deployment.py```.
 
 Install zappa and initialize it.
 

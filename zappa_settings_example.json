@@ -1,0 +1,27 @@
+{
+    "dev": {
+        "app_function": "api.app.app",
+        "aws_region": "your_aws_region",
+        "profile_name": "default",
+        "project_name": "your_project_name",
+        "runtime": "python3.8",
+        "s3_bucket": "your_bucket_name",
+        "exclude": [
+            ".vscode",
+            ".git*",
+            "*.md",
+            "*.txt",
+            "LICENSE",
+            "*__pycache__*",
+            "deployment.py",
+            "spam.csv"
+        ],
+        "layers": [
+            "arn:aws:lambda:eu-west-1:399891621064:layer:AWSLambda-Python38-SciPy1x:14"
+        ],
+        "prebuild_script": "deployment.pre_deploy",
+        "callbacks": {
+            "zip": "deployment.deployment_zip_created"
+        }
+    }
+}
