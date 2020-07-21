@@ -4,6 +4,13 @@ Create a simple spam prediction API using Flask which can then be deployed to AW
 
 The prediction model used is based off of work done by [Susan Li](https://github.com/susanli2016/SMS-Message-Spam-Detector) and the input dataset is provided by [kaggle](https://www.kaggle.com/uciml/sms-spam-collection-dataset).
 
+
+## Process Overview
+
+Ideally the training of the model (and the model itself) should be done outside of the classification lamdba function.
+
+![](model-production-process.drawio.svg)
+
 ## Install Dependencies and Configure Flask
 
 ```bash
