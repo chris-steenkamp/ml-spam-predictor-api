@@ -36,6 +36,6 @@ toml==0.10.1
 tqdm==4.47.0
 troposphere==2.6.1
 urllib3==1.26.19
-Werkzeug==3.0.1
+Werkzeug==3.0.6
 wsgi-request-logger==0.4.6
 zappa==0.51.0
