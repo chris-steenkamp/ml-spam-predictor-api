@@ -35,7 +35,7 @@ threadpoolctl==2.1.0
 toml==0.10.1
 tqdm==4.66.3
 troposphere==2.6.1
-urllib3==1.26.19
+urllib3==2.5.0
 Werkzeug==3.0.1
 wsgi-request-logger==0.4.6
 zappa==0.51.0
